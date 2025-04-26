@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: auto; /* Allow vertical scrolling */
+        }
+
+        /* Header Section */
+        h1 {
+            color: #ff3366;
+            font-size: 2.5rem;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.1rem;
+            text-align: center;
+            margin: 10px 0 30px;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        /* Responses Section */
+        .responses-section {
+            width: 100%;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            box-sizing: border-box;
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            background-image: url('http://www.pixelstalk.net/wp-content/uploads/2016/04/A-very-pink-abstract-wallpaper-HD.png');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+
+        th {
+            background-color: rgba(255, 51, 102, 0.8); /* Transparent pink background */
+            color: #fff;
+        }
+
+        td {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+            color: #333;
+        }
+
+        tr:nth-child(even) td {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Thank You for Your Feedback!</h1>
+        <p>
+            Your feedback helps us improve and provide better services. We truly appreciate your effort in sharing your thoughts.
+        </p>
+    </header>
+
+    <main>
+        <div class="responses-section">
+            <h1 style="color: #ff3366;">Previous Responses</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Customer</th>
+                        <th style="width: 75%;">Feedback</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://img.freepik.com/premium-photo/beautiful-middleaged-women-smile_911620-14425.jpg" alt="Customer 1">
+                            <p><strong>Sarah</strong></p>
+                        </td>
+                        <td>
+                            <p>"I absolutely loved the Red Roses! They were fresh, beautiful, and arrived in perfect condition. Will definitely buy again."</p>
+                            <p><em>Flower Purchased: Red Roses</em></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://img.freepik.com/free-photo/close-up-young-successful-man-smiling-camera-standing-casual-outfit-against-blue-background_1258-65746.jpg" alt="Customer 2">
+                            <p><strong>John</strong></p>
+                        </td>
+                        <td>
+                            <p>"The Sunflowers brightened my home instantly. Such a wonderful experience shopping here!"</p>
+                            <p><em>Flower Purchased: Sunflowers</em></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

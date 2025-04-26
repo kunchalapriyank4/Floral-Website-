@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background-color: #ffccdd;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            color: #ff3366;
+            margin: 0;
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #ff3366, #ff6699, #ff99b3);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 8px 12px;
+            background-color: #ff99b3;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #ff6699;
+            color: white;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        section h2 {
+            color: #ff3366;
+
+        }
+        .flower-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .flower {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            background-color: #fff;
+            border: 1px solid #ffccdd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .flower img {
+            width: 150px;
+            height: 100px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .flower .details {
+            padding-top: 10px;
+        }
+        .flower .details h3 {
+            margin: 0;
+            color: #ff6699;
+        }
+        .flower .details p {
+            margin: 5px 0;
+        }
+        .add-to-cart {
+            background-color: #ff6699;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .add-to-cart:hover {
+            background-color: #ff3366;
+        }
+        footer {
+            background-color: #ffccdd;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+        .contact-form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ffccdd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #ff6699;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #ff3366;
+
+        }
+        .feedback .testimonial {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #ffccdd;
+            padding: 10px;
+        }
+        .feedback .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .feedback .testimonial p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>The Blooming Basket</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#flowers">Flowers</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home">
+    <h2>Welcome to Our Flower Shop</h2>
+    <p>Discover a wide variety of fresh flowers for every occasion. Browse through our collection and find the perfect flowers for your home or as a gift!</p>
+</section>
+
+<section id="flowers" style="background-image: url('http://wallpapercave.com/wp/urCQIA5.jpg'); background-size: cover; background-position: center; padding: 50px 0;">
+    <h2>Our Flower Collection</h2>
+
+    <div class="flower-container">
+
+        <div class="flower">
+            <img src="https://www.pixelstalk.net/wp-content/uploads/images2/Red_Rose-Bouquet-Hd-Images-Wallpaper.jpg" alt="Red Roses">
+            <div class="details">
+                <h3>Red Roses</h3>
+                <p>Beautiful and vibrant red roses, perfect for any occasion.</p>
+                <p><strong>Price:</strong> $15.99</p>
+            </div>
+            <button class="add-to-cart" data-name="Red Roses" data-price="15.99">Add to Cart</button>
+        </div>
+
+        <div class="flower">
+            <img src="https://s2.best-wallpaper.net/wallpaper/3840x2160/1806/Pink-fresh-tulips-gray-background_3840x2160.jpg" alt="Tulips">
+            <div class="details">
+                <h3>Fresh Tulips</h3>
+                <p>Colorful tulips that bring joy to any room.</p>
+                <p><strong>Price:</strong> $12.99</p>
+            </div>
+            <button class="add-to-cart" data-name="Fresh Tulips" data-price="12.99">Add to Cart</button>
+        </div>
+
+        <div class="flower">
+            <img src="https://img.freepik.com/premium-photo/delicate-lilies-serene-calming-arrangement-ai-generated_866663-9163.jpg" alt="Lilies">
+            <div class="details">
+                <h3>Delicate Lilies</h3>
+                <p>Elegant lilies that add a touch of beauty to your space.</p>
+                <p><strong>Price:</strong> $18.99</p>
+            </div>
+            <button class="add-to-cart" data-name="Delicate Lilies" data-price="18.99">Add to Cart</button>
+        </div>
+
+        <div class="flower">
+            <img src="https://images3.alphacoders.com/115/115755.jpg" alt="Sunflowers">
+            <div class="details">
+                <h3>Sunflowers</h3>
+                <p>Bright and cheerful sunflowers to brighten up your day.</p>
+                <p><strong>Price:</strong> $14.99</p>
+            </div>
+            <button class="add-to-cart" data-name="Sunflowers" data-price="14.99">Add to Cart</button>
+        </div>
+
+        <div class="flower">
+            <img src="https://wallpapercave.com/wp/wp4432612.jpg" alt="Pink Carnations">
+            <div class="details">
+                <h3>Pink Carnations</h3>
+                <p>Soft pink carnations, perfect for any celebration.</p>
+                <p><strong>Price:</strong> $9.99</p>
+            </div>
+            <button class="add-to-cart" data-name="Pink Carnations" data-price="9.99">Add to Cart</button>
+        </div>
+
+        <div class="flower">
+            <img src="https://cdn.mos.cms.futurecdn.net/QnPCkCJ6ckhRLAQbUHgeXB.jpg" alt="Orchids">
+            <div class="details">
+                <h3>Orchids</h3>
+                <p>Exotic orchids to bring elegance and serenity to your home.</p>
+                <p><strong>Price:</strong> $22.99</p>
+            </div>
+            <button class="add-to-cart" data-name="Orchids" data-price="22.99">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="cart">
+    <h2>Your Cart</h2>
+    <table style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead>
+            <tr>
+                <th style="padding: 10px; border-bottom: 2px solid #ffccdd; text-align: left;">Cart Summary</th>
+                <th style="padding: 10px; border-bottom: 2px solid #ffccdd; text-align: right;">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/shopping-cart.png" alt="Cart Icon" style="width: 40px; height: 40px;">
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 10px; vertical-align: top;">
+                    <div id="cart-summary">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+                    <p><strong>Total: $<span id="cart-total">0.00</span></strong></p>
+                </td>
+                <td style="padding: 10px; vertical-align: top;"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Updated Form Section with Thank You Image -->
+    <div class="user-details" style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <!-- Form Section -->
+        <div style="width: 60%; padding-right: 20px;">
+            <h3>Enter Your Details</h3>
+            <form id="cart-form" action="thankyou.html" method="GET">
+                <label for="name" style="font-size: 18px; text-align: left; display: block; margin-bottom: 5px;">Full Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name" style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+
+                <label for="email" style="font-size: 18px; text-align: left; display: block; margin-bottom: 5px;">Email Address:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email" style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+
+                <label for="address" style="font-size: 18px; text-align: left; display: block; margin-bottom: 5px;">Shipping Address:</label>
+                <textarea id="address" name="address" required placeholder="Enter your shipping address" style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br>
+
+                <label for="phone" style="font-size: 18px; text-align: left; display: block; margin-bottom: 5px;">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number" style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+
+                <label for="charge" style="font-size: 18px; text-align: left; display: block; margin-bottom: 5px;">Total Charge:</label>
+                <input type="number" id="charge" name="charge" required placeholder="Total charge" style="width: 100%; padding: 8px; margin-bottom: 10px;" step="0.01" readonly><br>
+
+                <input type="submit" value="Submit Details" style="padding: 10px 20px; background-color: #ffccdd; border: none; cursor: pointer;">
+            </form>
+        </div>
+
+        <!-- Thank You Image Section -->
+        <div style="width: 35%; display: flex; justify-content: center; align-items: center; text-align: center;">
+            <div>
+                <img src="https://img.icons8.com/ios-filled/50/000000/thank-you.png" alt="Thank You Image" style="width: 80%; max-width: 150px;">
+                <p style="font-size: 16px;">Thank you for your purchase!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    let cartItems = [];
+
+    // Function to calculate the total charge
+    function calculateTotal() {
+        let total = 0;
+        cartItems.forEach(item => {
+            total += item.price;
+        });
+        return total.toFixed(2); // return the total charge formatted to 2 decimal places
+    }
+
+    // Function to update the cart display and total charge
+    function updateCart() {
+        const cartSummary = document.getElementById('cart-summary');
+        const cartTotal = document.getElementById('cart-total');
+        const totalChargeField = document.getElementById('charge');
+        
+        // Clear the cart summary
+        cartSummary.innerHTML = '';
+
+        // Display cart items
+        cartItems.forEach(item => {
+            const itemElement = document.createElement('p');
+            itemElement.textContent = `${item.name}: $${item.price.toFixed(2)}`;
+            cartSummary.appendChild(itemElement);
+        });
+
+        // Update the total
+        const total = calculateTotal();
+        cartTotal.textContent = total;
+        totalChargeField.value = total; // Update the hidden charge field with total amount
+    }
+
+    // Handle "Add to Cart" button click
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            const itemName = button.getAttribute('data-name');
+            const itemPrice = parseFloat(button.getAttribute('data-price'));
+
+            // Add the item to the cart
+            cartItems.push({ name: itemName, price: itemPrice });
+
+            // Update the cart and total charge
+            updateCart();
+        });
+    });
+
+    // Form submission - dynamically set the total charge in the hidden input field
+    const form = document.getElementById('cart-form');
+    form.addEventListener('submit', function(event) {
+        const totalChargeField = document.getElementById('charge');
+        const total = calculateTotal();
+
+        // Ensure the total charge field is set before submitting
+        totalChargeField.value = total;
+    });
+</script>
+
+
+<section id="feedback" style="background-image: url('http://www.pixelstalk.net/wp-content/uploads/2016/04/A-very-pink-abstract-wallpaper-HD.png'); background-size: cover; background-position: center; padding: 40px 0; color: #fff;">
+    <h2>Leave Your Feedback</h2>
+    
+    <form id="feedback-form" class="contact-form" action="feedback.html" method="GET">
+        <label for="customer-name">Your Name</label>
+        <input type="text" id="customer-name" name="name" placeholder="Enter your name" required>
+    
+        <label for="customer-feedback">Your Feedback</label>
+        <textarea id="customer-feedback" name="feedback" rows="3" placeholder="Share your feedback here..." required></textarea>
+    
+        <label for="purchased-flower">Flower Purchased</label>
+        <input type="text" id="purchased-flower" name="flower" placeholder="Enter the flower you purchased" required>
+    
+        <button type="submit">Submit Feedback</button>
+    </form>
+</section>
+
+
+
+
+
+
+
+
+<section id="contact" style="background-image: url('https://wallpaperaccess.com/full/474013.jpg'); background-size: cover; background-position: center; padding: 50px 0; color: white;">    <h2>Contact Us</h2>
+    <p style="color: black;">If you need further assistance, feel free to reach out!</p>
+
+    <form class="contact-form" action="contact.html" method="GET">
+        <label for="name" style="display: block; margin-bottom: 15px;">
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+        </label>
+        <label for="email" style="display: block; margin-bottom: 15px;">
+            <input type="email" id="email" name="email" required placeholder="Your Email">
+        </label>
+        <label for="message" style="display: block; margin-bottom: 15px;">
+            <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+        </label>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+
+<footer>
+    <p>&copy; The Bloomimg Baskets. All Rights Reserved.</p>
+</footer>
+
+
+</body>
+</html>
